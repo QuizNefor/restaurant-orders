@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказы в ресторане</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Ресторан</h1>
+    <div id="roleSelection">
+        <button onclick="selectRole('customer')">Заказчик</button>
+        <button onclick="selectRole('executor')">Исполнитель</button>
+    </div>
+    
+    <div id="executorLogin" class="hidden">
+        <h2>Введите пароль</h2>
+        <input type="password" id="executorPassword">
+        <button onclick="checkPassword()">Войти</button>
+    </div>
+    
+    <div id="menu" class="hidden">
+        <h2>Меню</h2>
+        <button onclick="resetRole()">Выйти</button>
+        <div id="menuItems"></div>
+        <div id="addMenuItem" class="hidden">
+            <input type="text" id="dishName" placeholder="Название блюда">
+            <input type="number" id="dishPrice" placeholder="Цена">
+            <button onclick="addMenuItem()">Добавить</button>
+        </div>
+    </div>
+    
+    <div id="orders" class="hidden">
+        <h2>Заказы</h2>
+        <button onclick="resetRole()">Выйти</button>
+        <div id="orderList"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
